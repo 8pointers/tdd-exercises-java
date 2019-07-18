@@ -3,6 +3,7 @@ package roulette;
 import org.junit.Before;
 import org.junit.Test;
 import static org.junit.Assert.*;
+import static org.junit.jupiter.api.Assertions.assertThrows;
 public class HelloWorldTest {
 
 	// this would normally be in a separate (domain) class
@@ -31,6 +32,7 @@ public class HelloWorldTest {
 		// arrange
 		// act
 		burp();
+		assertThrows(IllegalArgumentException.class, () -> burp());
 		// assert
 	}
 }
